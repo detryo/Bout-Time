@@ -174,7 +174,6 @@ class EventManager : Events {
                 print("Event error \(error)")
             }
         }
-        
         return randomEvents
     }
 }
