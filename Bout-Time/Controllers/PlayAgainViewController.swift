@@ -9,11 +9,18 @@
 import UIKit
 
 class PlayAgainViewController: UIViewController {
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    var score: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+       scoreLabel.text = score
     }
-
+    
+    @IBAction func dismiss(_ sender: UIButton) {
+        performSegue(withIdentifier: "goBack", sender: nil)
+    }
 }

@@ -164,7 +164,7 @@ class EventManager : Events {
         return event
     }
     
-    func randomEvents() -> [EventItem] {
+    func randdomEvents() -> [EventItem] {
         var randomEvents: [EventItem] = []
         
         for _ in 1...eventsPerRound {

@@ -7,13 +7,25 @@
 //
 
 import UIKit
+import WebKit
 
-class WikiViewController: UIViewController {
+class WikiViewController: UIViewController, WKUIDelegate {
+    
+    @IBOutlet weak var webView: WKWebView!
+    
+    var wikipediaLink: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let wikiLinkURL = URL(string: wikipediaLink)
+        let request = URLRequest(url: wikiLinkURL!)
+        webView.load(request)
     }
+    
+    @IBAction func dismiss(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
 }
